@@ -68,6 +68,45 @@ top: 52px;
   line-height: 36px; */
 }
 
-.navbar .navbar-nav .nav-item NavLink{
+/* .navbar .navbar-nav .nav-item .NavLink{
   padding: 150px;
+} */
+
+.navbar{
+  /* position: fixed; */
+  overflow: auto;
+   height: auto;
+   top: 0;
+   width: 100%;
+   position: relative;
+}
+
+.navbar .navbar-nav .nav-item .nav-link{
+display:inline-block;
+padding: 15px;
+text-align: center;
+transition : 0.4s;
+width: 16vw;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 200;
+font-size: 20px;
+line-height: 20px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  /* border-top: 4px solid #ffffff; */
+  border-bottom: 4px solid #ffffff;
+  padding: 6px 0; 
+}
+
+.navbar .navbar-nav .nav-but .btn{
+  border: 2px solid #000000;
+border-radius: 10px;
+box-sizing: border-box;
+width: 150px;
+height: 45px;
+left: 1154px;
+top: 52px;
+bottom:50px;
 }

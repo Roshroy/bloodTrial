@@ -7,7 +7,7 @@ import "./../App.css";
 const Navbar = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white ps-5">
         <NavLink className="navbar-brand" to="#">
           Navbar
         </NavLink>
@@ -49,16 +49,14 @@ const Navbar = () => {
             {/* <li className="nav-item">
         <NavLink className="nav-link" to="/login "><span className='login'>Log In</span></NavLink>
        </li> */}
-          </ul>
-          <ul class='navbar-nav ms-auto'>
-            
-              <li className="nav-but">
+
+<li className="nav-but">
                 <NavLink className="btn btn-outline-dark" to="/find">
                   Log In
                 </NavLink>
               </li>
-          
           </ul>
+
         </div>
       </nav>
     </>

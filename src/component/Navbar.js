@@ -50,7 +50,7 @@ const Navbar = () => {
         <NavLink className="nav-link" to="/login "><span className='login'>Log In</span></NavLink>
        </li> */}
 
-<li className="nav-but">
+           <li className="nav-but">
                 <NavLink className="btn btn-outline-dark" to="/find">
                   Log In
                 </NavLink>

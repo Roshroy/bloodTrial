@@ -110,3 +110,27 @@ left: 1154px;
 top: 52px;
 bottom:50px;
 }
+
+.signup .container .signup-content .signup-form .card-header{
+  /* position: relative; */
+/* width: 700px;
+height: 250px;
+left: 100px;
+top: 213px; */
+
+background: linear-gradient(90.1deg, #46052D -1.59%, #46052D -1.58%, #500732 14.15%, #5E0933 31.58%, #610834 46.9%, #6A0B37 62.75%, #991747 76.48%, #B32346 93.91%);
+/* position: absolute; */
+/* width: 300px;
+height: 45px;
+left: 94px;
+top: 273px; */
+
+/* font-family: 'Roboto';
+font-style: normal;
+font-weight: 100px;
+font-size: 25px;
+line-height: 43px; */
+
+color: #FFFFFF;
+
+}

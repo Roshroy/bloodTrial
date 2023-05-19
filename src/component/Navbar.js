@@ -51,7 +51,7 @@ const Navbar = () => {
        </li> */}
 
            <li className="nav-but">
-                <NavLink className="btn btn-outline-dark" to="/find">
+                <NavLink className="btn btn-outline-dark" to="/Login">
                   Log In
                 </NavLink>
               </li>

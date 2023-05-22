@@ -5,15 +5,23 @@ const Signup = (e) => {
     firstname:"",lastname:"",email:"",password:"",phone:"",address:"",
     state:"",district:""
   })
+
+  const[optionValue, setOptionValue] = useState("");
  
   let name, value;
 
-  const handleInputs = () =>{
+  const handleInputs = (e) =>{
   
     console.log(e);
     name =e.target.name;
     value = e.target.value;
    setUser({...user,[name]:value})
+  }
+
+  const handleSelect = (f) =>{
+    console.log(f.target.value);
+    setOptionValue(f.target.value)
+    
   }
 
   return (
@@ -25,7 +33,7 @@ const Signup = (e) => {
               <div class="card-header py-3">
                 <h2 className="mb-200">Register As Donor</h2>
               </div>
-              <form>
+             
                 <form>
                   <div class="row mb-4">
                     <div class="col-md-6 mb-4">
@@ -59,7 +67,7 @@ const Signup = (e) => {
                       </div>
                     </div>
                   </div>
-                </form>
+                
                 <div class="row">
                   <div class="col">
                     <div class="col-md-6 mb-4 d-flex align-items-center">
@@ -116,7 +124,9 @@ const Signup = (e) => {
                 </div>
                 <div class="row">
                   <div class="col-md-6 mb-4">
-                    <select class="select">
+                    <select class="select"
+                    onChange={handleInputs}
+                    >
                       <option value="1">State</option>
                       <option value="2">Option 1</option>
                       <option value="3">Option 2</option>
@@ -124,7 +134,9 @@ const Signup = (e) => {
                     </select>
                   </div>
                   <div class="col-md-6 mb-4">
-                    <select class="select">
+                    <select class="select"
+                    onChange={handleSelect}
+                    >
                       <option value="1">District</option>
                       <option value="2">Option 1</option>
                       <option value="3">Option 2</option>
@@ -132,7 +144,9 @@ const Signup = (e) => {
                     </select>
                   </div>
                   <div class="col-md-6 mb-4">
-                    <select class="select">
+                    <select class="select"
+                     onChange={handleSelect}
+                    >
                       <option value="1">Blood Group </option>
                       <option value="2">Option 1</option>
                       <option value="3">Option 2</option>
@@ -155,9 +169,13 @@ const Signup = (e) => {
                     </label>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">
+                {/* <button type="submit" class="btn btn-primary">
                   Sign in
-                </button>
+                </button> */}
+                <div className="form-group form-button">
+                  <input type ="Submit" name="signup" className="form-submit"
+                  value="register"  />
+                </div>
               </form>
             </div>
           </div>

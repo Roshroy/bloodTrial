@@ -21,8 +21,29 @@ const Signup = (e) => {
   const handleSelect = (f) =>{
     console.log(f.target.value);
     setOptionValue(f.target.value)
-    
+    setUser({...user,[name]:value})
   }
+  
+  const PostData = async (e) =>{
+      e.preventDefault();
+
+      const { firstname, lastname, email, password, phone, address,
+      state, district } = user;
+
+      const res = await fetch("/register",{
+        method : "POST",
+        headers: {
+          "Content-Type" : "application/json"
+        },
+        body:JSON.stringify({
+          firstname, lastname, email, password, phone, address,
+      state, district
+        })
+      });
+      const u = await res.json();
+
+  }
+
 
   return (
     <>
@@ -34,7 +55,7 @@ const Signup = (e) => {
                 <h2 className="mb-200">Register As Donor</h2>
               </div>
              
-                <form>
+                <form method="POST" >
                   <div class="row mb-4">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
@@ -174,7 +195,7 @@ const Signup = (e) => {
                 </button> */}
                 <div className="form-group form-button">
                   <input type ="Submit" name="signup" className="form-submit"
-                  value="register"  />
+                  value="register"  onClick={PostData} />
                 </div>
               </form>
             </div>

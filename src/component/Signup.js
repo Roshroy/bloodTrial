@@ -1,6 +1,9 @@
 import React, {useState} from "react";
+// import {useHistory} from 'react-router-dom';
+import { useNavigate} from "react-router-dom";
 
-const Signup = (e) => {
+const Signup = () => {
+  const history = useNavigate();
   const [user, setUser]=useState({
     firstname:"",lastname:"",email:"",password:"",phone:"",address:"",
     state:"",district:""
@@ -21,7 +24,7 @@ const Signup = (e) => {
   const handleSelect = (f) =>{
     console.log(f.target.value);
     setOptionValue(f.target.value)
-    setUser({...user,[name]:value})
+    setUser({...optionValue,[name]:value})
   }
   
   const PostData = async (e) =>{
@@ -33,14 +36,26 @@ const Signup = (e) => {
       const res = await fetch("/register",{
         method : "POST",
         headers: {
-          "Content-Type" : "application/json"
+          "Content-Type" : "application/json",
+           "Accept" : 'application/json'
         },
         body:JSON.stringify({
           firstname, lastname, email, password, phone, address,
       state, district
         })
       });
-      const u = await res.json();
+      const data = await res.json();
+
+      if(data.status = 422 || !data)
+      {
+        window.alert("Invalid Registration");
+        console.log("Invalid Registration");
+      }
+      else{
+        window.alert("registration succesfull");
+        console.log("registration succesfull");
+        history.push("/login");
+      }
 
   }
 

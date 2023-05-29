@@ -7,7 +7,9 @@ import Login from './component/Login';
 import { Route, Routes } from 'react-router-dom';
 import "./component/navbar.css";
 // import Nav from './component/Nav';
+import { Typography } from '@mui/material';
 import ErrorPage from './component/ErrorPage';
+import Register from './component/Register';
 
 export const App = () => {
   return (
@@ -16,7 +18,7 @@ export const App = () => {
        <Routes>
        <Route  path="/" element={  <Home />} />
        <Route  path="/about" element={  <About />} />
-       <Route  path="/register" element={  <Signup />} />
+       <Route  path="/register" element={  <Register />} />
        <Route  path="/login" element={  <Login />} />
        <Route path="" element={ <ErrorPage />}/>
        </Routes>

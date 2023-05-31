@@ -135,6 +135,29 @@ color: #FFFFFF;
 
 }
 
-.h2 {
+.header {
+  /* width: 1326px;
+  height: 164px;
+  left: 5700px;
+  right: 57px; */
+  /* top: 213px; */
   background: linear-gradient(90.1deg, #46052D -1.59%, #46052D -1.58%, #500732 14.15%, #5E0933 31.58%, #610834 46.9%, #6A0B37 62.75%, #991747 76.48%, #B32346 93.91%);
 }
+.header1{
+  
+  /* width: 300px;
+  height: 45px;
+  left: 94px;
+  top: 273px;
+   */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  /* line-height: 42px; */
+  
+  color: #FFFFFF;
+}
+/* .name-fields {
+  margin-bottom: 4px;
+} */

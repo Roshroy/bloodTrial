@@ -9,7 +9,7 @@ const Navbar = () => {
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-white ps-5">
         <NavLink className="navbar-brand" to="#">
-          Navbar
+          BloodLink
         </NavLink>
         <button
           class="navbar-toggler"
